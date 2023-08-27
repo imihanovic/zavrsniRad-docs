@@ -1,0 +1,51 @@
+\documentclass[12pt, a4paper]{article}
+
+\input{00_preamble}
+
+\begin{document}
+
+\selectlanguage{croatian}
+\input{00_frontmatter} % Numbering & title pages
+
+\input{01_summary_hr}
+
+\noindent\textbf{Ključne riječi}: \textit{ASP.NET Core, Docker, Identity, RazorPages}
+
+\selectlanguage{english}
+\input{01_summary_en}
+
+\noindent\textbf{Keywords:} \textit{ASP.NET Core, Docker, Identity, RazorPages}
+\newpage
+\selectlanguage{croatian}
+\input{02_introduction}
+
+\newpage
+\input{03_technologies}
+
+\newpage
+\input{04_implementation}
+
+\newpage
+\input{05_functionalities}
+\newpage
+\input{06_conclusion}
+
+\newpage
+\addcontentsline{toc}{section}{Literatura}
+\bibliography{citations}
+\bibliographystyle{IEEEtran}
+
+\newpage
+\clearpage
+\pagestyle{empty}
+\phantomsection
+
+\begin{appendices}
+\appendix
+
+\listoffigures
+\listoftables
+\lstlistoflistings
+\end{appendices}
+
+\end{document}
