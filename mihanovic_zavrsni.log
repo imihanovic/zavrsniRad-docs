@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.2)  27 AUG 2023 20:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.8.2)  28 AUG 2023 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1229,7 +1229,7 @@ p}{C:/Users/imiha.DESKTOP-V5R17OO/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 [1
 
 ] (02_introduction.tex) [2] (03_technologies.tex
-<assets/NuGet.png, id=228, 782.925pt x 598.6365pt>
+<assets/NuGet.png, id=230, 782.925pt x 598.6365pt>
 File: assets/NuGet.png Graphic file (type png)
 <use assets/NuGet.png>
 Package pdftex.def Info: assets/NuGet.png  used on input line 14.
@@ -1238,30 +1238,30 @@ Package pdftex.def Info: assets/NuGet.png  used on input line 14.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 23.
  [4 <./assets/NuGet.png>]
-<assets/IdentityDatabase.png, id=252, 1340.00626pt x 853.1875pt>
+<assets/IdentityDatabase.png, id=259, 1340.00626pt x 853.1875pt>
 File: assets/IdentityDatabase.png Graphic file (type png)
 <use assets/IdentityDatabase.png>
 Package pdftex.def Info: assets/IdentityDatabase.png  used on input line 42.
 (pdftex.def)             Requested size: 441.01773pt x 280.79767pt.
 [5]
-<assets/identityScaffold.png, id=264, 720.89325pt x 495.65175pt>
+<assets/identityScaffold.png, id=272, 720.89325pt x 495.65175pt>
 File: assets/identityScaffold.png Graphic file (type png)
 <use assets/identityScaffold.png>
 Package pdftex.def Info: assets/identityScaffold.png  used on input line 52.
 (pdftex.def)             Requested size: 441.01773pt x 303.22443pt.
  [6 <./assets/IdentityDatabase.png>]
-<assets/enableDocker.png, id=279, 517.33275pt x 344.487pt>
+<assets/enableDocker.png, id=287, 517.33275pt x 344.487pt>
 File: assets/enableDocker.png Graphic file (type png)
 <use assets/enableDocker.png>
 Package pdftex.def Info: assets/enableDocker.png  used on input line 62.
 (pdftex.def)             Requested size: 264.61333pt x 176.20642pt.
  [7 <./assets/identityScaffold.png>]
-<assets/addDockerSupport.png, id=291, 510.708pt x 383.63326pt>
+<assets/addDockerSupport.png, id=299, 510.708pt x 383.63326pt>
 File: assets/addDockerSupport.png Graphic file (type png)
 <use assets/addDockerSupport.png>
 Package pdftex.def Info: assets/addDockerSupport.png  used on input line 69.
 (pdftex.def)             Requested size: 264.61333pt x 198.77628pt.
-<assets/dockerCompose.png, id=295, 198.7425pt x 77.088pt>
+<assets/dockerCompose.png, id=303, 198.7425pt x 77.088pt>
 File: assets/dockerCompose.png Graphic file (type png)
 <use assets/dockerCompose.png>
 Package pdftex.def Info: assets/dockerCompose.png  used on input line 78.
@@ -1269,14 +1269,14 @@ Package pdftex.def Info: assets/dockerCompose.png  used on input line 78.
 
 [8 <./assets/enableDocker.png> <./assets/addDockerSupport.png>] [9 <./assets/do
 ckerCompose.png>] [10]
-<assets/dockerDesktop.png, id=376, 1051.5285pt x 551.661pt>
+<assets/dockerDesktop.png, id=384, 1051.5285pt x 551.661pt>
 File: assets/dockerDesktop.png Graphic file (type png)
 <use assets/dockerDesktop.png>
 Package pdftex.def Info: assets/dockerDesktop.png  used on input line 160.
 (pdftex.def)             Requested size: 352.81552pt x 185.09589pt.
 ) [11 <./assets/dockerDesktop.png>] [12]
 (04_implementation.tex
-<assets/Ntier.png, id=404, 352.31625pt x 352.31625pt>
+<assets/Ntier.png, id=415, 352.31625pt x 352.31625pt>
 File: assets/Ntier.png Graphic file (type png)
 <use assets/Ntier.png>
 Package pdftex.def Info: assets/Ntier.png  used on input line 8.
@@ -1286,149 +1286,186 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--12
 
  []
 
+<assets/projectDependency.png, id=417, 264.99pt x 132.495pt>
+File: assets/projectDependency.png Graphic file (type png)
+<use assets/projectDependency.png>
+Package pdftex.def Info: assets/projectDependency.png  used on input line 15.
+(pdftex.def)             Requested size: 264.61333pt x 132.31674pt.
+[13 <./assets/Ntier.png>]
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 14.
-<assets/StrukturaPrimeCareMed.png, id=407, 204.765pt x 195.73125pt>
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 21.
+<assets/StrukturaPrimeCareMed.png, id=431, 204.765pt x 195.73125pt>
 File: assets/StrukturaPrimeCareMed.png Graphic file (type png)
 <use assets/StrukturaPrimeCareMed.png>
-Package pdftex.def Info: assets/StrukturaPrimeCareMed.png  used on input line 1
-7.
+Package pdftex.def Info: assets/StrukturaPrimeCareMed.png  used on input line 2
+4.
 (pdftex.def)             Requested size: 264.61333pt x 252.95428pt.
-[13 <./assets/Ntier.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-5.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+2.
 
 (C:\Users\imiha.DESKTOP-V5R17OO\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\
 ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [14 <./assets/StrukturaPrimeCareMed.png>]
-<assets/ERdiagram.png, id=428, 610.6815pt x 389.0535pt>
+) [14 <./assets/projectDependency.png> <./assets/StrukturaPrimeCareMed.png>]
+<assets/ERdiagram.png, id=444, 889.82437pt x 508.90125pt>
 File: assets/ERdiagram.png Graphic file (type png)
 <use assets/ERdiagram.png>
-Package pdftex.def Info: assets/ERdiagram.png  used on input line 42.
-(pdftex.def)             Requested size: 441.01773pt x 280.97314pt.
- [15 <./assets/ERdiagram.png>] [16] [17] [18]
-Overfull \hbox (14.5346pt too wide) in paragraph at lines 150--151
-\T1/ptm/m/n/12 to-riju. Ob-zi-rom da je ko-ri-²tena vi-²es-lojna ar-hi-tek-tura
-, po-trebno je na-vesti \T1/pcr/m/n/12 -StartupProject
+Package pdftex.def Info: assets/ERdiagram.png  used on input line 49.
+(pdftex.def)             Requested size: 441.01773pt x 252.22139pt.
+
+Overfull \hbox (14.33034pt too wide) in paragraph at lines 47--53
+\T1/ptm/m/n/12 taka u pgAd-min su-£e-lju. Sa slike su iz-os-tav-ljene ta-blice 
+do-bi-vene ko-ri-²te-njem \T1/pcr/m/n/12 IdentityUser
  []
 
-[19]
-Overfull \hbox (14.40411pt too wide) in paragraph at lines 176--177
-[]\T1/ptm/m/n/12 Metoda za spre-ma-nje ge-ne-ri-ra-nih po-da-taka u bazu po-da-
-taka iz me-tode \T1/pcr/m/n/12 PatientSeeder
- []
-
-
-Overfull \hbox (20.547pt too wide) in paragraph at lines 186--187
-[]\T1/ptm/m/n/12 Punjenje po-dat-cima po-mo¢u JSON da-to-teka ko-ri-²teno je za
- en-ti-tete \T1/pcr/m/n/12 Medicine\T1/ptm/m/n/12 , \T1/pcr/m/n/12 Vaccine
- []
-
-[20] [21] [22]
-Overfull \hbox (4.38321pt too wide) in paragraph at lines 252--253
+[15] [16 <./assets/ERdiagram.png>] [17] [18] [19] [20] [21] [22]
+Overfull \hbox (4.38321pt too wide) in paragraph at lines 264--265
 \T1/pcr/m/n/12 Appointment.Patient.Id \T1/ptm/m/n/12 jed-nak prim-lje-nom ar-gu
--mentu funk-cije \T1/pcr/m/n/12 PatientId\T1/ptm/m/n/12 . 
+-mentu funk-cije \T1/pcr/m/n/12 PatientId\T1/ptm/m/n/12 .
  []
 
-[23] [24] [25] [26] [27] [28]
-Overfull \hbox (33.42455pt too wide) in paragraph at lines 459--460
-[]\T1/pcr/m/n/12 .cshtml \T1/ptm/m/n/12 da-to-teka sa-drºi formu za unos s \T1/
-pcr/m/n/12 post \T1/ptm/m/n/12 me-to-dom koja se iz-vr-²ava u \T1/pcr/m/n/12 On
-PostAsync
- []
-
-[29]) [30] (05_functionalities.tex
-<assets/loginForma.png, id=843, 1156.32pt x 536.60475pt>
+[23] [24] [25] [26] [27] [28] [29] [30]) [31] (05_functionalities.tex
+<assets/loginForma.png, id=881, 1156.32pt x 536.60475pt>
 File: assets/loginForma.png Graphic file (type png)
 <use assets/loginForma.png>
 Package pdftex.def Info: assets/loginForma.png  used on input line 4.
 (pdftex.def)             Requested size: 441.01773pt x 204.65701pt.
-<assets/formaShift.png, id=846, 277.63725pt x 249.93375pt>
+<assets/formaShift.png, id=884, 277.63725pt x 249.93375pt>
 File: assets/formaShift.png Graphic file (type png)
 <use assets/formaShift.png>
 Package pdftex.def Info: assets/formaShift.png  used on input line 13.
 (pdftex.def)             Requested size: 264.61333pt x 238.21751pt.
- [31 <./assets/loginForma.png>]
-<assets/sysAdminIndex.png, id=855, 1156.32pt x 538.4115pt>
+ [32 <./assets/loginForma.png>]
+<assets/sysAdminIndex.png, id=894, 1156.32pt x 538.4115pt>
 File: assets/sysAdminIndex.png Graphic file (type png)
 <use assets/sysAdminIndex.png>
 Package pdftex.def Info: assets/sysAdminIndex.png  used on input line 22.
 (pdftex.def)             Requested size: 441.01773pt x 205.3461pt.
-<assets/viewAllUsers.png, id=858, 1156.32pt x 538.4115pt>
+<assets/viewAllUsers.png, id=897, 1156.32pt x 538.4115pt>
 File: assets/viewAllUsers.png Graphic file (type png)
 <use assets/viewAllUsers.png>
 Package pdftex.def Info: assets/viewAllUsers.png  used on input line 31.
 (pdftex.def)             Requested size: 441.01773pt x 205.3461pt.
- [32 <./assets/formaShift.png> <./assets/sysAdminIndex.png>]
-<assets/newPatient.png, id=870, 1155.1155pt x 538.4115pt>
+ [33 <./assets/formaShift.png> <./assets/sysAdminIndex.png>]
+<assets/newPatient.png, id=911, 1155.1155pt x 538.4115pt>
 File: assets/newPatient.png Graphic file (type png)
 <use assets/newPatient.png>
 Package pdftex.def Info: assets/newPatient.png  used on input line 40.
 (pdftex.def)             Requested size: 441.01773pt x 205.55971pt.
- [33 <./assets/viewAllUsers.png> <./assets/newPatient.png>]
-<assets/newCheckup.png, id=884, 1156.32pt x 540.21825pt>
+ [34 <./assets/viewAllUsers.png> <./assets/newPatient.png>]
+<assets/newCheckup.png, id=924, 1156.32pt x 540.21825pt>
 File: assets/newCheckup.png Graphic file (type png)
 <use assets/newCheckup.png>
 Package pdftex.def Info: assets/newCheckup.png  used on input line 49.
 (pdftex.def)             Requested size: 441.01773pt x 206.03517pt.
-<assets/allCheckups.png, id=890, 1156.32pt x 537.207pt>
+<assets/allCheckups.png, id=930, 1156.32pt x 537.207pt>
 File: assets/allCheckups.png Graphic file (type png)
 <use assets/allCheckups.png>
 Package pdftex.def Info: assets/allCheckups.png  used on input line 58.
 (pdftex.def)             Requested size: 441.01773pt x 204.88672pt.
-<assets/newAppointment.png, id=892, 1156.32pt x 537.80925pt>
+<assets/newAppointment.png, id=932, 1156.32pt x 537.80925pt>
 File: assets/newAppointment.png Graphic file (type png)
 <use assets/newAppointment.png>
 Package pdftex.def Info: assets/newAppointment.png  used on input line 65.
 (pdftex.def)             Requested size: 441.01773pt x 205.11641pt.
- [34 <./assets/newCheckup.png> <./assets/allCheckups.png>]
-<assets/waitingRoom.png, id=905, 1156.32pt x 537.207pt>
+ [35 <./assets/newCheckup.png> <./assets/allCheckups.png>]
+<assets/waitingRoom.png, id=945, 1156.32pt x 537.207pt>
 File: assets/waitingRoom.png Graphic file (type png)
 <use assets/waitingRoom.png>
 Package pdftex.def Info: assets/waitingRoom.png  used on input line 74.
 (pdftex.def)             Requested size: 441.01773pt x 204.88672pt.
-<assets/appointmentDetails.png, id=908, 1156.32pt x 537.80925pt>
+<assets/appointmentDetails.png, id=948, 1156.32pt x 537.80925pt>
 File: assets/appointmentDetails.png Graphic file (type png)
 <use assets/appointmentDetails.png>
 Package pdftex.def Info: assets/appointmentDetails.png  used on input line 83.
 (pdftex.def)             Requested size: 441.01773pt x 205.11641pt.
- [35 <./assets/newAppointment.png> <./assets/waitingRoom.png>]) [36 <./assets/a
-ppointmentDetails.png>] (06_conclusion.tex) [37] (mihanovic_zavrsni.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
+ [36 <./assets/newAppointment.png> <./assets/waitingRoom.png>]
+<assets/newCheckupAppointment.png, id=963, 312.56775pt x 303.534pt>
+File: assets/newCheckupAppointment.png Graphic file (type png)
+<use assets/newCheckupAppointment.png>
+Package pdftex.def Info: assets/newCheckupAppointment.png  used on input line 9
+4.
+(pdftex.def)             Requested size: 264.61333pt x 256.96764pt.
+<assets/dateCheckupAppointment.png, id=966, 381.22424pt x 298.11375pt>
+File: assets/dateCheckupAppointment.png Graphic file (type png)
+<use assets/dateCheckupAppointment.png>
+Package pdftex.def Info: assets/dateCheckupAppointment.png  used on input line 
+103.
+(pdftex.def)             Requested size: 264.61333pt x 206.9269pt.
+ [37 <./assets/appointmentDetails.png> <./assets/newCheckupAppointment.png>]
+<assets/timeCheckupAppointment.png, id=981, 413.1435pt x 525.76425pt>
+File: assets/timeCheckupAppointment.png Graphic file (type png)
+<use assets/timeCheckupAppointment.png>
+Package pdftex.def Info: assets/timeCheckupAppointment.png  used on input line 
+112.
+(pdftex.def)             Requested size: 264.61333pt x 336.7527pt.
+) [38 <./assets/dateCheckupAppointment.png> <./assets/timeCheckupAppointment.pn
+g>] [39] (06_conclusion.tex) [40] (mihanovic_zavrsni.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+[]\T1/ptm/m/n/12 Microsoft Cor-po-ra-tion, ``Mi-cro-soft Do-cu-men-ta-tion - AS
+P.NET Core over-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
+\T1/ptm/m/n/12 view,'' []$https : / / learn . microsoft . com / en -[] us / asp
+net / core / introduction -[] to -[] aspnet -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
 []\T1/ptm/m/n/12 Microsoft Cor-po-ra-tion, ``Mi-cro-soft Do-cu-men-ta-tion - Sc
 af-fold Iden-tity,''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
 []$\T1/ptm/m/n/12 https : / / learn . microsoft . com / en -[] us / aspnet / co
 re / security / authentication / sca^^[old -[]
  []
 
 
-Underfull \hbox (badness 1888) in paragraph at lines 38--41
+Underfull \hbox (badness 1888) in paragraph at lines 57--60
 []\T1/ptm/m/n/12 ------, ``Mi-cro-soft Do-cu-men-ta-tion - Con-ta-iner To-ols F
 or Doc-ker,'' []$https : / / learn .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
 []\T1/ptm/m/n/12 Grigoras Alexan-dru, ``N-Tier-Architecture,'' []$https : / / g
 ithub . com / nuyonu / N -[] Tier -[]
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 53--56
+Underfull \hbox (badness 1668) in paragraph at lines 76--79
 \T1/ptm/m/n/12 / / learn . microsoft . com / en -[] us / azure / architecture /
  guide / architecture -[] styles / n -[] tier$[], po-sje-
  []
 
-) [38] (mihanovic_zavrsni.lof)
+[41]
+Underfull \hbox (badness 1168) in paragraph at lines 85--89
+[]\T1/ptm/m/n/12 Microsoft Cor-po-ra-tion, ``Mi-cro-soft Do-cu-men-ta-tion - On
+e-to-many re-la-ti-on-ships,''
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
+[]\T1/ptm/m/n/12 ------, ``Mi-cro-soft Do-cu-men-ta-tion - ASP.NET Core Aut-hen
+-ti-ca-tion,'' []$https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
+\T1/ptm/m/n/12 / / learn . microsoft . com / en -[] us / dotnet / api / microso
+ft . aspnetcore . authentication ? view =
+ []
+
+) [42] (mihanovic_zavrsni.lof)
 \tf@lof=\write5
 \openout5 = `mihanovic_zavrsni.lof'.
 
@@ -1437,24 +1474,24 @@ Underfull \hbox (badness 1668) in paragraph at lines 53--56
 \openout6 = `mihanovic_zavrsni.lot'.
 
  (mihanovic_zavrsni.lol
-[39
+[43
 
 ])
 \tf@lol=\write7
 \openout7 = `mihanovic_zavrsni.lol'.
 
- [40] (mihanovic_zavrsni.aux)
+ [44] (mihanovic_zavrsni.aux)
 Package rerunfilecheck Info: File `mihanovic_zavrsni.out' has not changed.
-(rerunfilecheck)             Checksum: 88EEDE4C3A2CB7D37DA8640C72B692CC;4315.
+(rerunfilecheck)             Checksum: 0BCD44E5321BFE0E640ACAB863049B1B;4323.
  ) 
 Here is how much of TeX's memory you used:
- 17084 strings out of 476331
- 284407 string characters out of 5780214
- 2271660 words of memory out of 5000000
- 36666 multiletter control sequences out of 15000+600000
+ 17161 strings out of 476331
+ 286103 string characters out of 5780214
+ 2428660 words of memory out of 5000000
+ 36711 multiletter control sequences out of 15000+600000
  552876 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,17n,79p,1010b,2010s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,17n,79p,1024b,2010s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/imiha.DESKTOP-V5R17OO/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/latxfont/lcircle1.pfb><C:/Users/imiha.DESKTOP-V5R17OO/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/imiha.DESKTOP-V5
@@ -1466,9 +1503,9 @@ ograms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/imiha.DESKTOP-V5R17OO/
 AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/imiha.
 DESKTOP-V5R17OO/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on mihanovic_zavrsni.pdf (44 pages, 7762733 bytes).
+Output written on mihanovic_zavrsni.pdf (48 pages, 8183001 bytes).
 PDF statistics:
- 1151 PDF objects out of 1200 (max. 8388607)
- 510 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1246 PDF objects out of 1440 (max. 8388607)
+ 538 named destinations out of 1000 (max. 500000)
+ 538 words of extra memory for PDF output out of 10000 (max. 10000000)
 

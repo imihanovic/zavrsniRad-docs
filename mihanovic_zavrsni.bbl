@@ -21,10 +21,29 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{aspNetCore}
+{Microsoft Corporation}, ``{Microsoft Documentation - ASP.NET Core overview},''
+  \url{https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0},
+  posjećeno 14.8.2023.
+
+\bibitem{cSharp}
+------, ``{Microsoft Documentation - Csharp introduction},''
+  \url{https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/},
+  posjećeno 12.6.2023.
+
 \bibitem{nuGet}
-{Microsoft Corporation}, ``{Microsoft Documentation - NuGet introduction},''
+------, ``{Microsoft Documentation - NuGet introduction},''
   \url{https://learn.microsoft.com/hr-hr/nuget/what-is-nuget}, posjećeno
   14.8.2023.
+
+\bibitem{entityFrameworkCore}
+------, ``{Microsoft Documentation - Entity Framework Core ORM},''
+  \url{https://learn.microsoft.com/en-us/ef/core/}, posjećeno 13.8.2023.
+
+\bibitem{RazorPages}
+------, ``{Microsoft Documentation - Razor Pages introduction},''
+  \url{https://learn.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-7.0&tabs=visual-studio},
+  posjećeno 14.8.2023.
 
 \bibitem{aspNETGitHub}
 \url{https://github.com/dotnet/aspnetcore}, posjećeno 14.8.2023.
@@ -45,6 +64,10 @@
   \url{https://learn.microsoft.com/en-us/visualstudio/containers/tutorial-multicontainer},
   posjećeno 12.6.2023.
 
+\bibitem{PostgreSQL}
+{PostgreSQL Global Development Group}, ``{PostgreSQL - RDBMS},''
+  \url{https://www.postgresql.org/}, posjećeno 13.8.2023.
+
 \bibitem{nTierGitHub}
 {Grigoras Alexandru}, ``{N-Tier-Architecture},''
   \url{https://github.com/nuyonu/N-Tier-Architecture}, posjećeno 28.3.2023.
@@ -58,6 +81,12 @@
 {Tarnum Java SRL}, ``{Baeldung - N-Tier Architecture},''
   \url{https://www.baeldung.com/cs/n-tier-architecture}, posjećeno 5.4.2023.
 
+\bibitem{oneToMany}
+{Microsoft Corporation}, ``{Microsoft Documentation - One-to-many
+  relationships},''
+  \url{https://learn.microsoft.com/en-us/ef/core/modeling/relationships/one-to-many},
+  posjećeno 12.6.2023.
+
 \bibitem{bogus1}
 {Brian Chavez}, ``{GitHub Repository - Bogus},''
   \url{https://github.com/bchavez/Bogus}, posjećeno 12.6.2023.
@@ -66,5 +95,10 @@
 {Microsoft Corporation}, ``{Microsoft Documentation - LINQ},''
   \url{https://learn.microsoft.com/en-us/dotnet/csharp/linq/}, posjećeno
   12.6.2023.
+
+\bibitem{aspNetCoreAuthentication}
+------, ``{Microsoft Documentation - ASP.NET Core Authentication},''
+  \url{https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authentication?view=aspnetcore-6.0},
+  posjećeno 14.8.2023.
 
 \end{thebibliography}

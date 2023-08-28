@@ -2,14 +2,14 @@
 
 \subsection{ASP.NET Core}
 
-ASP.NET Core (engl. \textit{Active Server Pages Network Enabled Technologies Core}) višeplatformski je okvir otvorenog k\^oda korišten za izradu aplikacija. Inačica je ASP.NET okvira opće namjene koja se može koristiti na Windows, Linux, macOS operacijskim sustavima te Dockeru. ASP.NET Core stvoren je uzevši najkorisnije značajke .NET-a i .NET Corea. Pomoću ASP.NET Core okvira omogućena je izrada aplikacija za bilo koji tehnološki uređaj kao što su iOS uređaji, Android uređaji, oblak i drugi. ASP.NET Core u \textit{namespaceu} \texttt{Microsoft.AspNetCore.Authorization} sadrži tipove koji omogućuju autorizaciju.
+ASP.NET Core (engl. \textit{Active Server Pages Network Enabled Technologies Core}) višeplatformski je okvir otvorenog k\^oda korišten za izradu aplikacija. Inačica je ASP.NET okvira opće namjene koja se može koristiti na Windows, Linux, macOS operacijskim sustavima te Dockeru. ASP.NET Core stvoren je uzevši najkorisnije značajke .NET-a i .NET Corea. Pomoću ASP.NET Core okvira omogućena je izrada aplikacija za bilo koji tehnološki uređaj kao što su iOS uređaji, Android uređaji, oblak i drugi. ASP.NET Core u \textit{namespaceu} \texttt{Microsoft.AspNetCore.Authorization} sadrži tipove koji omogućuju autorizaciju\cite{aspNetCore}.
 
 
-\subsubsection{C}
-C\# je objektno-orijentiran programski jezik stvoren za rad s .NET okvirom. Svrha C\#-a jest da bude jednostavan i moderan programski jezik dobiven kombinacijom elemenata C i C++ jezika s utjecajem Java jezika te time postaje robustan jezik za razvoj \textit{softvera}. Uveden je i koncept LINQ (engl. \textit{Language Integrated Query}) alata za postavljanje upita i manipuliranje podatcima iz baze podataka i drugih izvora. Omogućeno je korištenje asinkronih metoda (pogledati poglavlje~\ref{subsec:repo}) uz pomoć ključnih riječi \texttt{async} i \texttt{await} kojima se omogućuje izvršavanje zadataka bez blokiranja glavne niti. C\# jezik podržava i automatsko upravljanje memorijom (engl. \textit{auto-garbage collection}). Uz prethodno navedene, neke od glavnih karakteristika C\#-a su višenitnost (engl. \textit{multithreading}) i stroga tipizacija koja zahtijeva određivanje tipova podataka tijekom kompajliranja.
+\subsubsection{C\#}
+C\# je objektno-orijentiran programski jezik stvoren za rad s .NET okvirom. Svrha C\#-a jest da bude jednostavan i moderan programski jezik dobiven kombinacijom elemenata C i C++ jezika s utjecajem Java jezika te time postaje robustan jezik za razvoj \textit{softvera}. Uveden je i koncept LINQ (engl. \textit{Language Integrated Query}) alata za postavljanje upita i manipuliranje podatcima iz baze podataka i drugih izvora. Omogućeno je korištenje asinkronih metoda (pogledati poglavlje~\ref{subsec:repo}) uz pomoć ključnih riječi \texttt{async} i \texttt{await} kojima se omogućuje izvršavanje zadataka bez blokiranja glavne niti. C\# jezik podržava i automatsko upravljanje memorijom (engl. \textit{auto-garbage collection}). Uz prethodno navedene, neke od glavnih karakteristika C\#-a su višenitnost (engl. \textit{multithreading}) i stroga tipizacija koja zahtijeva određivanje tipova podataka tijekom kompajliranja~\cite{cSharp}.
 
 \subsubsection{NuGet upravitelj paketa}
-NuGet (engl. \textit{NuGet Package Manager}) alat je za upravljanje paketa u ASP.NET okviru. Korišten je za instalaciju paketa (biblioteka) koji su potrebni pri izradi aplikacije. Paketi su ZIP datoteke s ekstenzijom .nupack ili .nupkg koje je također moguće i izraditi pomoću aplikacije NuGet i pohraniti ih u privatni ili javni repozitorij. \cite{nuGet}
+NuGet (engl. \textit{NuGet Package Manager}) alat je za upravljanje paketa u ASP.NET okviru. Korišten je za instalaciju paketa (biblioteka) koji su potrebni pri izradi aplikacije. Pakete je moguće izraditi pomoću NuGet aplikacije i pohraniti ih u privatni ili javni repozitorij kao ZIP datoteke s ekstenzijom .nupack ili .nupkg\cite{nuGet}.
 \begin{figure}[H]
 	\includegraphics[width=1\linewidth,clip=]{assets/NuGet.png}
 	\centering
@@ -19,7 +19,7 @@ NuGet (engl. \textit{NuGet Package Manager}) alat je za upravljanje paketa u ASP
  
 \subsubsection{Entity Framework Core} 
  
- Entity Framework Core višeplatformska je biblioteka otvorenog k\^oda koja omogućuje pristup bazi podataka preko izvornog k\^oda pomoću ORM-a (\textit{Object-relational mapping}) . Entity Framework Core radi na Windows, MacOS i Linux operacijskim sustavima a omogućen je instalacijom NuGet paketa u aplikaciji pomoću upravitelja paketa (engl. \textit{Package Manager}) ili .NET sučelja naredbenog retka (engl.\textit{Command Line Interface}) naredbom prikazanom u ispisu ~\ref{lst:nuGetAdd}
+ Entity Framework Core višeplatformska je biblioteka otvorenog k\^oda koja omogućuje pristup bazi podataka preko izvornog k\^oda pomoću ORM-a (\textit{Object-relational mapping})\cite{entityFrameworkCore}. Entity Framework Core radi na Windows, MacOS i Linux operacijskim sustavima a omogućen je instalacijom NuGet paketa u aplikaciji pomoću upravitelja paketa (engl. \textit{Package Manager}) ili .NET sučelja naredbenog retka (engl.\textit{Command Line Interface}) naredbom prikazanom u ispisu~\ref{lst:nuGetAdd}.
 \begin{lstlisting}[caption={Naredba za dodavanje NuGet paketa}, label=lst:nuGetAdd]
 dotnet add [<PROJECT>] package <PACKAGE_NAME>
     [-f|--framework <FRAMEWORK>] [--interactive]
@@ -28,12 +28,12 @@ dotnet add [<PROJECT>] package <PACKAGE_NAME>
 \end{lstlisting}
  
 \subsubsection{Razor Pages}
-Razor Pages model je za programiranje web aplikacija koji omogućuje jednostavno učitavanje podataka. Sintaksno je i funkcionalno sličan MVC (\textit{Model-View-Controller}) modelu. Najvažnija značajka kojom se Razor Pages model razlikuje od MVC modela jest .cshtml datoteka te .cshtml.cs datoteka takozvanog k\^oda iza (engl. \textit{code-behind}) koje su omogućile neupotrebu odvojenih datoteka za modele i upravljače (engl. \textit{controller}). Stranica upravlja vlastitim modelom koji se definira u code-behind datoteci. Primjer upravljanja modelom bit će prikazan u poglavlju \ref{subsec:izvedbaRP} 
+Razor Pages model je za programiranje web aplikacija koji omogućuje jednostavno učitavanje podataka. Sintaksno je i funkcionalno sličan MVC (\textit{Model-View-Controller}) modelu. Najvažnija značajka kojom se Razor Pages model razlikuje od MVC modela jest \texttt{.cshtml} datoteka te \texttt{.cshtml.cs} datoteka takozvanog k\^oda iza (engl. \textit{code-behind}) koje su omogućile neupotrebu odvojenih datoteka za modele i upravljače (engl. \textit{controller}). Stranica upravlja vlastitim modelom koji se definira u code-behind datoteci\cite{RazorPages}. Primjer upravljanja modelom bit će prikazan u poglavlju \ref{subsec:izvedbaRP}.
 
 \subsubsection{ASP.NET Core Identity}
 \label{subsubsec:IdentityCore}
  
-ASP.NET Core Identity dostupan je kao Razor Class biblioteka omogućena instalacijom NuGet paketa.  ASP.NET Core Identity podržava funkcionalnosti za upravljanje korisničkog sučelja, lozinki, uloga korisnika, potvrdu mail računa i drugih značajki korisnika aplikacije. Izvorni k\^od dostupan je na GitHub platformi \cite{aspNETGitHub}. U aplikaciji \textit{PrimeCareMed}, instalirani su: \\ \texttt{Microsoft.AspNetCore.Identity.EntityFrameworkCore} \\ \texttt{Microsoft.AspNetCore.Identity.UI}  \\ NuGet paketi čime je omogućeno korištenje \texttt{IdentityUser} klase u svrhu naslijeđa od strane \texttt{ApplicationUser} klase. Uz naslijeđivanje \texttt{IdentityUser} klase, potrebno je naslijediti \texttt{IdentityDbContext} tipa \texttt{ApplicationUser} prikazano na ispisu~\ref{inheritIdentity}
+ASP.NET Core Identity dostupan je kao Razor Class biblioteka omogućena instalacijom NuGet paketa.  ASP.NET Core Identity podržava funkcionalnosti za upravljanje korisničkog sučelja, lozinki, uloga korisnika, potvrdu mail računa i drugih značajki korisnika aplikacije. Izvorni k\^od dostupan je na GitHub platformi \cite{aspNETGitHub}. U aplikaciji \textit{PrimeCareMed}, instalirani su: \\ \texttt{Microsoft.AspNetCore.Identity.EntityFrameworkCore} \\ \texttt{Microsoft.AspNetCore.Identity.UI}  \\ NuGet paketi čime je omogućeno korištenje \texttt{IdentityUser} klase u svrhu naslijeđa od strane \texttt{ApplicationUser} klase. Uz naslijeđivanje \texttt{IdentityUser} klase, potrebno je naslijediti \texttt{IdentityDbContext} tipa \texttt{ApplicationUser} prikazano na ispisu~\ref{inheritIdentity}.
 \begin{lstlisting}[caption={Naslijeđivanje \texttt{IdentityDbContext} klase}, label=inheritIdentity]
 public class DatabaseContext : IdentityDbContext<ApplicationUser>
 \end{lstlisting}
@@ -47,7 +47,7 @@ public class DatabaseContext : IdentityDbContext<ApplicationUser>
 
 
 \paragraph{Scaffold Identity}\mbox{}\\
-\indent Desnim klikom na \texttt{PrimeCareMed.Frontend} > \texttt{Add} > \\\texttt{New Scaffolded Item} otvara se prozor prikazan na slici~\ref{fig:identityScaffold} te je omogućeno dodavanje opcije \texttt{Identity}. Dodavanjem Identity Scaffoldera na \texttt{PrimeCareMed.Frontend} projekt dobivene su unaprijed kreirane Razor stranice koje omogućuju funkcionalnosti povezane s upravljanjem korisničkih računa. \cite{scaffoldIdentity}
+\indent Desnim klikom na \texttt{PrimeCareMed.Frontend} > \texttt{Add} > \\\texttt{New Scaffolded Item} otvara se prozor prikazan na slici~\ref{fig:identityScaffold} te je omogućeno dodavanje opcije \texttt{Identity}. Dodavanjem Identity Scaffoldera na \texttt{PrimeCareMed.Frontend} projekt dobivene su unaprijed kreirane Razor stranice koje omogućuju funkcionalnosti povezane s upravljanjem korisničkih računa\cite{scaffoldIdentity}.
 \begin{figure}[H]
 	\includegraphics[width=1\linewidth,clip=]{assets/identityScaffold.png}
 	\centering
@@ -56,7 +56,7 @@ public class DatabaseContext : IdentityDbContext<ApplicationUser>
 \end{figure}
 \subsection{Docker}
 
-Kao razvojno okruženje, u svrhu izvođenja web aplikacije na različitim operativnim sustavima korišteni su Docker spremnici (engl. \textit{containers}). Prilikom stvaranja projekta \texttt{PrimeCareMed.Frontend}, odabrana je Enable Docker opcija prikazana na slici~\ref{fig:enableDocker}. Na postojeći projekt \texttt{PrimeCareMed.API} Docker podrška omogućena je dodavanjem \textit{Docker Support} opcijom prikazanim na slici~\ref{fig:addDocker}.\cite{containerToolsDocker} \cite{multiContainerDocker}
+Kao razvojno okruženje, u svrhu izvođenja web aplikacije na različitim operativnim sustavima korišteni su Docker spremnici (engl. \textit{containers}). Prilikom stvaranja projekta \texttt{PrimeCareMed.Frontend}, odabrana je Enable Docker opcija prikazana na slici~\ref{fig:enableDocker}. Na postojeći projekt \texttt{PrimeCareMed.API} Docker podrška omogućena je dodavanjem \textit{Docker Support} opcijom prikazanim na slici~\ref{fig:addDocker}\cite{containerToolsDocker} \cite{multiContainerDocker}.
 
 \begin{figure}[H]
 	\includegraphics[width=0.6\linewidth,clip=]{assets/enableDocker.png}
@@ -165,5 +165,5 @@ ENTRYPOINT ["dotnet", "PrimeCareMed.Frontend.dll"]
 
 
 \subsection{PostgreSQL}
-PostgreSQL besplatan je program otvorenog k\^oda za upravljanje objektno-relacijskim bazama podataka .(engl. \textit{ORDBMS - Object-Relational Database Management System}) koristeći SQL (\textit{Structured Query Language}) jezik. Dozvoljena su proširenja PostgreSQL mogućnosti kao što je dodavanje novih tipova podataka, funkcija, operatora ili agregatnih funkcija. PostgreSQL trenutno je jedna od najnaprednijih baza podataka otvorenog k\^oda. Prikaz sheme baze podataka, strukture svih entiteta i druge mogućnosti PostgreSQLa dostupne su u pgAdmin sučelju.
+PostgreSQL besplatan je program otvorenog k\^oda za upravljanje objektno-relacijskim bazama podataka (engl. \textit{ORDBMS - Object-Relational Database Management System}) koristeći SQL (\textit{Structured Query Language}) jezik. Dozvoljena su proširenja PostgreSQL mogućnosti kao što je dodavanje novih tipova podataka, operatora ili funkcija\cite{PostgreSQL}. PostgreSQL trenutno je jedna od najnaprednijih baza podataka otvorenog k\^oda. Prikaz sheme baze podataka, strukture svih entiteta i druge mogućnosti PostgreSQLa dostupne su u pgAdmin sučelju.
 

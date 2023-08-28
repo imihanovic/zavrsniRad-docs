@@ -10,15 +10,19 @@
 \contentsline {figure}{\numberline {6}{\ignorespaces \texttt {docker-compose} projekt\relax }}{9}{figure.caption.10}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Pokrenuti spremnici u Docker Desktop aplikaciji\relax }}{11}{figure.caption.11}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Ovisnosti slojeva\relax }}{13}{figure.caption.12}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Struktura \textit {PrimeCareMed} aplikacije\relax }}{14}{figure.caption.13}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Dijagram relacijske baze podataka\relax }}{15}{figure.caption.14}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Login forma\relax }}{31}{figure.caption.15}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Forma za odabir smjene\relax }}{32}{figure.caption.16}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Početna stranica aplikacije\relax }}{32}{figure.caption.17}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Prikaz svih korisnika aplikacije\relax }}{33}{figure.caption.18}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Unos novog pacijenta\relax }}{33}{figure.caption.19}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Forma za unos novog \texttt {Checkup} entiteta\relax }}{34}{figure.caption.20}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Prikaz svih elemenata entiteta \texttt {Checkup}\relax }}{34}{figure.caption.21}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Unos novog pregleda u čekaonicu\relax }}{35}{figure.caption.22}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Čekaonica\relax }}{35}{figure.caption.23}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Detalji pregleda\relax }}{36}{figure.caption.24}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Ovisnosti projekta\relax }}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Struktura \textit {PrimeCareMed} aplikacije\relax }}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Dijagram relacijske baze podataka\relax }}{16}{figure.caption.15}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Login forma\relax }}{32}{figure.caption.16}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Forma za odabir smjene\relax }}{33}{figure.caption.17}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Početna stranica aplikacije\relax }}{33}{figure.caption.18}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Prikaz svih korisnika aplikacije\relax }}{34}{figure.caption.19}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Unos novog pacijenta\relax }}{34}{figure.caption.20}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Forma za unos novog \texttt {Checkup} entiteta\relax }}{35}{figure.caption.21}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Prikaz svih elemenata entiteta \texttt {Checkup}\relax }}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Unos novog pregleda u čekaonicu\relax }}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Čekaonica\relax }}{36}{figure.caption.24}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Detalji pregleda\relax }}{37}{figure.caption.25}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Odabir pregleda\relax }}{37}{figure.caption.26}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Odabir datuma pregleda\relax }}{38}{figure.caption.27}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Odabir termina pregleda\relax }}{38}{figure.caption.28}%
