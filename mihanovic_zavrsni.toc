@@ -32,4 +32,4 @@
 \contentsline {subsection}{\numberline {3.8}Funkcionalnosti aplikacije}{31}{subsection.3.8}%
 \contentsline {section}{\numberline {4}Zaključak}{39}{section.4}%
 \contentsline {section}{Literatura}{40}{section.4}%
-\contentsline {section}{Dodatci}{42}{section*.33}%
+\contentsline {section}{Dodatci}{42}{section*.34}%

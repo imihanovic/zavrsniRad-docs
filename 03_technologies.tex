@@ -125,6 +125,12 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: root
     restart: unless-stopped
+    
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - '1025:1025' # smtp server
+      - '8025:8025' # web ui
 
 volumes:
   postgres-data:
