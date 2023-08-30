@@ -3,7 +3,7 @@
 \subsection{Postavljanje aplikacije}
 Za postavljanje aplikacije korišten je predložak \textbf{N-Tier} arhitekture s GitHub platforme dostupan na poveznici \cite{nTierGitHub}.
 N-Tier arhitektura višeslojna je klijent-server arhitektura čija je glavna značajka odvajanje aplikacije u fizičke razine i logičke slojeve. U korištenom predlošku, koristi se jedna fizička razina i pet logičkih slojeva kojima je dodan još jedan logički sloj naziva \texttt{PrimeCareMed.Frontend} kao ASP.NET Core Web App projekt u kojem je korišten Razor Pages okvir za izradu aplikacija. Pojedini sloj može koristiti usluge nižeg sloja što je omogućeno dodavanjem ovisnosti na svaki sloj\cite{nTierMicrosoft} \cite{nTierBaeldung}.
-Na slici~\ref{fig:nTier} prikazane su ovisnosti projekata u korištenoj arhitekturi. Naprimjer, sloj \texttt{PrimeCareMed.API} može koristiti usluge sloja \texttt{PrimeCareMed.Application} prikazano na slici~\ref{fig:projectDependency}. \\
+Na slici~\ref{fig:nTier} prikazane su ovisnosti projekata u korištenoj arhitekturi. Naprimjer, sloj \texttt{PrimeCareMed.API} može koristiti usluge sloja \texttt{PrimeCareMed.Application} zbog ovisnosti prikazane na slici~\ref{fig:projectDependency}. \\
 \begin{figure}[H]
 	\includegraphics[width=0.6\linewidth,clip=]{assets/Ntier.png}
 	\centering
@@ -37,14 +37,14 @@ Struktura \texttt{src} direktorija sastoji se od šest projekata: \\
 
 \item \texttt{PrimeCareMed.DataAccess} - korišten je za komunikaciju s bazom podataka. Sadrži \texttt{DatabaseContext} klasu u kojoj su definirani entiteti i veze među entitetima te stvorenu migraciju. Također, sadrži direktorij \texttt{Repositories} u kojem se nalaze repozitoriji koji manipuliraju podatcima u bazi podataka.
 
-\item \texttt{PrimeCareMed.Frontend} - sadrži \texttt{wwwroot} direktorij unutar kojeg se nalaze CSS (\textit{CSS - Cascading Style Sheets}) i JavaScript datoteke te poddirektorij \texttt{images} za skladištenje slika korištenih na korisničkom sučelju. Sadrži i poddirektorije za pojedine entitete u kojima se nalaze Razor stranice sa pripadajućim \textit{code-behind} datotekama za usmjeravanje.
+\item \texttt{PrimeCareMed.Frontend} - sadrži \texttt{wwwroot} direktorij unutar kojeg se nalaze CSS (\textit{CSS - Cascading Style Sheets}) i JavaScript datoteke te poddirektorij \texttt{images} za skladištenje slika korištenih na korisničkom sučelju. Sadrži i poddirektorije za pojedine entitete u kojima se nalaze Razor stranice s pripadajućim \textit{code-behind} datotekama za usmjeravanje.
 
 \item \texttt{PrimeCareMed.Shared} - sadrži zajedničke datoteke ostalih slojeva
 \end{itemize}
 
 \subsection{Baza podataka}
 \subsubsection{Struktura relacijske baze podataka}
-Na slici~\ref{fig:erDiagram} prikazan je ER (engl. \textit{Entity Relationship}) dijagram relacijske baze podataka u pgAdmin sučelju. Sa slike su izostavljene tablice dobivene korištenjem \texttt{IdentityUser} klase prikazane na slici~\ref{fig:IdentityDatabase}.
+Na slici~\ref{fig:erDiagram} prikazan je ER (engl. \textit{Entity Relationship}) dijagram relacijske baze podataka u pgAdmin sučelju. Sa slike su izostavljene tablice dobivene korištenjem\\\texttt{IdentityUser} klase prikazane na slici~\ref{fig:IdentityDatabase}.
 \begin{figure}[H]
 	\includegraphics[width=1\linewidth,clip=]{assets/ERdiagram.png}
 	\centering
@@ -55,7 +55,7 @@ Na slici~\ref{fig:erDiagram} prikazan je ER (engl. \textit{Entity Relationship})
 \subsubsection{Entiteti}
 
 Entiteti su definirani u \texttt{PrimeCareMed.Core} projektu.
-Na ispisu~\ref{appointmentEntity} prikazana je klasa entiteta \texttt{Appointment}. koja u sebi, uz druge podatkovne članove, sadrži referencu \texttt{Patient Patient} koja predstavlja objekt entiteta \texttt{Patient}, a EntityFrameworkCore stvara \textit{shadow key property} \texttt{PatientId} onog tipa kojeg je primarni ključ u klasi \texttt{Patient}. 
+Na ispisu~\ref{appointmentEntity} prikazana je klasa entiteta \texttt{Appointment}. koja u sebi, uz druge podatkovne članove, sadrži referencu \texttt{Patient Patient} koja predstavlja objekt entiteta \texttt{Patient}, a EntityFrameworkCore stvara \textit{shadow key property} \texttt{PatientId} onog tipa koji je primarni ključ u klasi \texttt{Patient}. 
 \begin{lstlisting}[caption={Entitet Appointment}, label=appointmentEntity]
 using PrimeCareMed.Core.Common;
 using PrimeCareMed.Core.Enums;
@@ -78,13 +78,13 @@ namespace PrimeCareMed.Core.Entities
     }
 }
 \end{lstlisting}
-Relacija jedan-na-više\cite{oneToMany} omogućena je navedenom referencom i definiranom kolekcijom tipa \texttt{Appointment} u klasi \texttt{Patient} prikazanom na ispisu ~\ref{appointmentCollection}
+Relacija jedan-na-više\cite{oneToMany} omogućena je navedenom referencom i definiranom kolekcijom tipa \texttt{Appointment} u klasi \texttt{Patient} prikazanom na ispisu~\ref{appointmentCollection}.
 \begin{lstlisting}[caption={Kolekcija Appointment objekata u klasi Patient}, label=appointmentCollection]
 public ICollection<Appointment>? Appointments { get; set; } = new List<Appointment>();
 \end{lstlisting}
 
 \subsubsection{Interakcija s bazom podataka}
-Interakcija aplikacije s bazom podataka započinje od \texttt{DbContext} klase koja je korištena za dohvaćanje podataka pomoću upita te spremanje novih i ažuriranje postojećih elemenata entiteta. Nakon definiranih entiteta, u \texttt{DatabaseContext.cs} datoteci definirane su kolekcije svih entiteta koje su kasnije korištene za pristup podatcima u bazi podataka. EntityFrameworkCore pomoću \texttt{ModelBuilder} klase automatski stvara jednostavne veze između entiteta. U \texttt{OnModelCreating} metodi korištena je \texttt{ModelBuilder} klasa odgovorna za stvaranje samih modela. Koristi definirane \texttt{DbSet} kolekcije entiteta za stvaranje entiteta i veza iz poznatih podataka. Dodatne konfiguracije mogu biti posebno zapisane u metodi.
+Interakcija aplikacije s bazom podataka započinje od \texttt{DbContext} klase koja je korištena za dohvaćanje podataka pomoću upita te za spremanje novih i ažuriranje postojećih elemenata entiteta. Nakon definiranih entiteta, u \texttt{DatabaseContext.cs} datoteci definirane su kolekcije svih entiteta koje su kasnije korištene za pristup podatcima u bazi podataka. EntityFrameworkCore pomoću \texttt{ModelBuilder} klase automatski stvara jednostavne veze između entiteta. U \texttt{OnModelCreating} metodi korištena je \texttt{ModelBuilder} klasa odgovorna za stvaranje samih modela. Koristi definirane \texttt{DbSet} kolekcije entiteta za stvaranje entiteta i veza iz poznatih podataka. Dodatne konfiguracije mogu biti posebno zapisane u metodi.
 
 \begin{lstlisting}[caption={DatabaseContext.cs datoteka}, label=dbContext]
 public DbSet<Medicine> Medicines { get; set; }
@@ -159,14 +159,14 @@ Migracije podataka kreirane su naredbom prikazanom u ispisu~\ref{addMigration} u
 Add-Migration InitialCreate -Project PrimeCareMed.DataAccess -StartupProject PrimeCareMed.API -OutputDir "Persistence/Migrations"
 \end{lstlisting}
 
-Nakon izvođenja naredbe, kreirana je migracija naziva \texttt{InitialCreate} koja se nalazi u \texttt{PrimeCareMed.DataAccess} projektu u \texttt{Persistence/Migrations} direktoriju. Obzirom da je korištena višeslojna arhitektura, potrebno je navesti\\\texttt{-StartupProject PrimeCareMed.API} koji predstavlja projekt najvišeg sloja koji je postavljen kao zadani pri izvršavanju migracije.
+Nakon izvođenja naredbe, kreirana je migracija naziva \texttt{InitialCreate} koja se nalazi u \texttt{PrimeCareMed.DataAccess} projektu u \texttt{Persistence/Migrations} direktoriju. S obzirom na to da je korištena višeslojna arhitektura, potrebno je navesti\\\texttt{-StartupProject PrimeCareMed.API} koji predstavlja projekt najvišeg sloja koji je postavljen kao zadani pri izvršavanju migracije.
 
 \begin{lstlisting}[caption={Primjena migracije na bazu podataka}, label=updateDatabase]
 Update-Database -Project PrimeCareMed.DataAccess -StartupProject PrimeCareMed.API -Connection "Host=localhost;Port=5432;Database=postgres;Username=admin;Password=root;Integrated Security=true;Pooling=true;"
 \end{lstlisting}
 
 \subsubsection{Punjenje podatcima}
-Ovisno o entitetu, punjenje baze podataka podatcima (engl. \textit{seeding}) obavljeno je \textit{JSON} datotekama ili Bogus generatorom za lažne podatke specificiran za .NET jezike. Elementi entiteta \texttt{ApplicationUser} i \texttt{Patient} zapisani su pomoću Bogus generatora u \texttt{DatabaseContextSeed} klasi koji je instaliran kao NuGet paket. U ispisu~\ref{PatientSeeder} vidljiva je metoda za punjenje podataka za entitet \texttt{Patient} koja prima broj elemenata entiteta koji će biti stvoreni.  \cite{bogus1}
+Ovisno o entitetu, punjenje baze podataka podatcima (engl. \textit{seeding}) obavljeno je \textit{JSON} datotekama ili Bogus generatorom za lažne podatke specificiranim za .NET jezike. Elementi entiteta \texttt{ApplicationUser} i \texttt{Patient} zapisani su pomoću Bogus generatora u \texttt{DatabaseContextSeed} klasi koji je instaliran kao NuGet paket. U ispisu~\ref{PatientSeeder} vidljiva je metoda za punjenje podataka za entitet \texttt{Patient} koja prima broj elemenata entiteta koji će biti stvoreni.  \cite{bogus1}
 
 \begin{lstlisting}[caption={\texttt{PatientInit} metoda za punjenje lažnih podataka}, label=PatientSeeder]
     public static List<Patient> PatientInit(int count)
@@ -216,7 +216,7 @@ Punjenje podatcima pomoću JSON datoteka korišteno je za entitete \texttt{Medic
 
 \subsection{Repozitoriji}
 \label{subsec:repo}
-Sloj aplikacije najbliži bazi podataka je repozitorij. Repozitoriji u aplikaciji smješteni su u \texttt{PrimeCareMed.DataAccess} projektu, a njihova uloga je dohvaćanje podataka iz baze podataka pomoću LINQ upita te spremanje, ažuriranje i brisanje podataka iz iste\cite{linq}. Asinkrone metode prepoznate su po ključnim riječima \texttt{await} i \texttt{async} koje omogućuju izvršavanje više različitih zahtjeva na bazu podataka istovremeno. U ispisu~\ref{checkupAppointmentRepo} u metodi \texttt{AddAsync} ključnom riječju \texttt{await} sprema se novi entitet te se daljnji k\^od u metodi ne izvršava dok se asinkrona operacija ne izvrši. Asinkrone metode u svom nazivu sadrže riječ \texttt{Async} da bi bile prepoznate.
+Sloj aplikacije najbliži bazi podataka jest repozitorij. Repozitoriji u aplikaciji smješteni su u \texttt{PrimeCareMed.DataAccess} projektu, a njihova je uloga dohvaćanje podataka iz baze podataka pomoću LINQ upita te spremanje, ažuriranje i brisanje podataka iz iste\cite{linq}. Asinkrone metode prepoznate su po ključnim riječima \texttt{await} i \texttt{async} koje omogućuju izvršavanje više različitih zahtjeva na bazu podataka istovremeno. U ispisu~\ref{checkupAppointmentRepo} u metodi \texttt{AddAsync} ključnom riječju \texttt{await} sprema se novi entitet te se daljnji k\^od u metodi ne izvršava dok se asinkrona operacija ne izvrši. Asinkrone metode u svom nazivu sadrže riječ \texttt{Async} da bi bile prepoznate.
 
 \begin{lstlisting}[caption={\texttt{CheckupAppointment} repozitorij}, label=checkupAppointmentRepo]
 namespace PrimeCareMed.DataAccess.Repositories.Impl
@@ -257,18 +257,18 @@ U ispisu~\ref{checkupAppointmentRepo} prikazan je dio repozitorija \texttt{Check
 \begin{itemize}
 \item \texttt{OrderByDescending} - silazno sortira skup podataka na temelju zadanog podatka.
 
-\item \texttt{Include} - učitava podatake povezanih entiteta, u konkretnom slučaju za pojedini \texttt{CheckupAppointment} element bit će dobiveni i podatci \\\texttt{HospitalCheckup} entiteta.
+\item \texttt{Include} - učitava podatke povezanih entiteta, u konkretnom slučaju za pojedini \texttt{CheckupAppointment} element bit će dobiveni i podatci \\\texttt{HospitalCheckup} entiteta.
 
-\item \texttt{ThenInclude} - učitava podatake povezanih entiteta s entitetom dobivenim koristeći \texttt{Include} metodu. Uz prethodno navedene podatke, bit će dobiveni podatci entiteta \texttt{Hospital} i \texttt{Checkup}.
+\item \texttt{ThenInclude} - učitava podatke povezanih entiteta s entitetom dobivenim koristeći \texttt{Include} metodu. Uz prethodno navedene podatke, bit će dobiveni podatci entiteta \texttt{Hospital} i \texttt{Checkup}.
 
-\item \texttt{Where} - filtrira skup podataka na temelju određenog uvjeta. U konkretnom primjeru, filtriraju se oni elementi \texttt{CheckupAppointment} entiteta kojima je \\\texttt{Appointment.Patient.Id} jednak primljenom argumentu funkcije \texttt{PatientId}. A obzirom da je u aplikaciji \texttt{Id} primarni ključ, rezultat će biti isti kao da smo koristili \texttt{FirstOrDefault}.
+\item \texttt{Where} - filtrira skup podataka na temelju određenog uvjeta. U konkretnom primjeru, filtriraju se oni elementi \texttt{CheckupAppointment} entiteta kojima je \\\texttt{Appointment.Patient.Id} jednak primljenom argumentu funkcije \texttt{PatientId}. S obzirom na to da je u aplikaciji \texttt{Id} primarni ključ, rezultat će biti isti kao da je korišten \texttt{FirstOrDefault}.
 
-\item \texttt{FirstOrDefault} - dohvaća prvu vrijednost elemenata koji zadovoljavaju uvjet ili vraća zadanu vrijednost ako se ne pronađe nijedan element, najčešće je to \textit{null} vrijednost
+\item \texttt{FirstOrDefault} - dohvaća prvu vrijednost elemenata koja zadovoljava uvjet ili vraća zadanu vrijednost ako se ne pronađe nijedan element, najčešće je to \textit{null} vrijednost
 \end{itemize}
 
 \subsection{Servisi}
 
-Servisi u aplikaciji predstavljaju sloj zadužen za oblikovanje i obradu podataka te omogućavanje istih za prikaz na korisničkom sučelju. Servisi primaju podatke iz repozitorija ili iz Razor stranica, upotrebljavajući \texttt{AutoMapper} \textit{namespace} oblikuju podatke po unaprijed definiranom modelu te ih proslijeđuju. 
+Servisi u aplikaciji predstavljaju sloj zadužen za oblikovanje i obradu podataka te omogućuju njihov prikaz na korisničkom sučelju s odabranim atributima. Servisi primaju podatke iz repozitorija ili iz Razor stranica, a upotrebljavajući \texttt{AutoMapper} \textit{namespace} oblikuju podatke po unaprijed definiranom modelu te ih prosljeđuju. 
 
 \begin{lstlisting}[caption={\texttt{PatientService} servis}, label=patientService]
 namespace PrimeCareMed.Application.Services.Impl
@@ -375,7 +375,7 @@ namespace PrimeCareMed.Application.Models.Patient
 \subsection{RazorPages izvedba}
 \label{subsec:izvedbaRP}
 
-Razor Pages koristi \texttt{.cshtml} i \texttt{.cshtml.cs} datoteke za obradu podataka dobivenih iz servisa, njihovu dodatnu obradu, proslijeđivanje te prikaz podataka na korisničkom sučelju. Podatcima se u predlošku pristupa pomoću Razor anotacija. \texttt{.cshtml} datoteka sadrži HTML strukturu i Razor sintaksu za generiranje dinamičkog sadržaja dok \texttt{.cshtml.cs} datoteka sadrži metode, svojstva i druge C\# komponente koje podržavaju funkcionalnost pripadajuće stranice.
+Razor Pages koristi \texttt{.cshtml} i \texttt{.cshtml.cs} datoteke za obradu podataka dobivenih iz servisa, njihovu dodatnu obradu, prosljeđivanje te prikaz podataka na korisničkom sučelju. Podatcima se u predlošku pristupa pomoću Razor anotacija. \texttt{.cshtml} datoteka sadrži HTML strukturu i Razor sintaksu za generiranje dinamičkog sadržaja, dok \texttt{.cshtml.cs} datoteka sadrži metode, svojstva i druge C\# komponente koje podržavaju funkcionalnost pripadajuće stranice.
 \subsubsection{\texttt{.cshtml} datoteke}
 \label{subsubsec:.cshtml}
 Datoteke s \texttt{.cshtml} ekstenzijom nazivaju se i Razor predlošcima korištenima za izradu dinamičkih web stranica kombinacijom C\# programskog jezika i HTMLa (\textit{HTML - HyperText Markup Language}). Mogu sadržavati i razne kontrolne strukture, petlje i uvjete. U ispisu~\ref{createCheckupHtml} prikazana je \texttt{CreateCheckup.cshtml} datoteka koja je korištena pri kreaciji novog pregleda. Za unos se koristi \texttt{asp-for} atribut koji povezuje HTML elemente s odgovarajućim svojstvima modela, u ovom slučaju \texttt{CheckupModelForCreate} modela.
@@ -437,7 +437,7 @@ U formama koje koriste padajući izbornik, korišten je \texttt{Select2} padaju�
 \end{lstlisting}
 \subsubsection{\texttt{.cshtml.cs} datoteke}
 \label{subsubsec:.cshtml.cs}
-Svaka \texttt{.cshtml} datoteka ima svoju \texttt{.cshtml.cs} datoteku poznatiju i kao \textit{Code-Behind} koja sadrži C\# k\^od koji podržava logiku i funkcionalnosti povezane s odgovarajućim Razor predloškom. Prilikom poziva stranice, \texttt{.cshtml.cs} datoteka prikazuje samu stranicu ili izvršava \texttt{OnGet} metodu. Obzirom da je navedena stranica korištena isključivo za unos podataka, dovoljno je navesti model ili atribute entiteta ispod \texttt{[BindProperty]} atributa s kojim će se unos sa stranice povezati. Korištenje \texttt{[BindProperty]} atributa olakšava manipulaciju podacima između korisničkog sučelja i serverske logike.
+Svaka \texttt{.cshtml} datoteka ima svoju \texttt{.cshtml.cs} datoteku poznatiju i kao \textit{Code-Behind} koja sadrži C\# k\^od koji podržava logiku i funkcionalnosti povezane s odgovarajućim Razor predloškom. Prilikom poziva stranice, \texttt{.cshtml.cs} datoteka prikazuje samu stranicu ili izvršava \texttt{OnGet} metodu. S obzirom na to da je navedena stranica korištena isključivo za unos podataka, dovoljno je navesti model ili atribute entiteta ispod \texttt{[BindProperty]} atributa s kojim će se unos sa stranice povezati. Korištenje \texttt{[BindProperty]} atributa olakšava manipulaciju podatcima između korisničkog sučelja i serverske logike.
 
 \begin{lstlisting}[caption={\texttt{CreateCheckup.cshtml.cs} datoteka}, label=createCheckupCs]
 using Microsoft.AspNetCore.Authorization;
