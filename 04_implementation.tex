@@ -55,7 +55,7 @@ Na slici~\ref{fig:erDiagram} prikazan je ER (engl. \textit{Entity Relationship})
 \subsubsection{Entiteti}
 
 Entiteti su definirani u projektu \texttt{PrimeCareMed.Core}.
-Na ispisu~\ref{appointmentEntity} prikazana je klasa entiteta \texttt{Appointment}. koja u sebi, uz druge podatkovne članove, sadrži referencu \texttt{Patient Patient} koja predstavlja objekt entiteta \texttt{Patient}, a EntityFrameworkCore stvara \textit{shadow key property} \texttt{PatientId} onog tipa koji je primarni ključ u klasi \texttt{Patient}. 
+Na ispisu~\ref{appointmentEntity} prikazana je klasa entiteta \texttt{Appointment} koja u sebi, uz druge podatkovne članove, sadrži referencu \texttt{Patient Patient} koja predstavlja objekt entiteta \texttt{Patient}, a EntityFrameworkCore stvara \textit{shadow key property} \texttt{PatientId} onog tipa koji je primarni ključ u klasi \texttt{Patient}. 
 \begin{lstlisting}[caption={Entitet \texttt{Appointment}}, label=appointmentEntity]
 using PrimeCareMed.Core.Common;
 using PrimeCareMed.Core.Enums;
@@ -86,7 +86,7 @@ public ICollection<Appointment>? Appointments { get; set; } = new List<Appointme
 \subsubsection{Interakcija s bazom podataka}
 Interakcija aplikacije s bazom podataka započinje od klase \texttt{DbContext} koja je korištena za dohvaćanje podataka pomoću upita te za spremanje novih i ažuriranje postojećih elemenata entiteta. Nakon definiranih entiteta, u datoteci \texttt{DatabaseContext.cs} definirane su kolekcije svih entiteta koje su kasnije korištene za pristup podatcima u bazi podataka. EntityFrameworkCore pomoću klase \texttt{ModelBuilder} automatski stvara jednostavne veze između entiteta. U metodi \texttt{OnModelCreating} korištena je klasa \texttt{ModelBuilder} odgovorna za stvaranje samih modela. Koristi definirane kolekcije entiteta \texttt{DbSet} za stvaranje entiteta i veza iz poznatih podataka. Dodatne konfiguracije mogu biti posebno zapisane u metodi.
 
-\begin{lstlisting}[caption={datoteka \texttt{DatabaseContext.cs}}, label=dbContext]
+\begin{lstlisting}[caption={Datoteka \texttt{DatabaseContext.cs}}, label=dbContext]
 public DbSet<Medicine> Medicines { get; set; }
 public DbSet<GeneralMedicineOffice> GeneralMedicineOffices { get; set; }
 public DbSet<Vaccine> Vaccines { get; set; }
@@ -375,10 +375,10 @@ namespace PrimeCareMed.Application.Models.Patient
 \subsection{RazorPages izvedba}
 \label{subsec:izvedbaRP}
 
-Razor Pages koristi datoteke \texttt{.cshtml} i \texttt{.cshtml.cs} za obradu podataka dobivenih iz servisa, njihovu dodatnu obradu, prosljeđivanje te prikaz podataka na korisničkom sučelju. Podatcima se u predlošku pristupa pomoću Razor anotacija. Datoteka \texttt{.cshtml} sadrži HTML strukturu i sintaksu Razor za generiranje dinamičkog sadržaja, dok datoteka \texttt{.cshtml.cs} sadrži metode, svojstva i druge komponente C\#a koje podržavaju funkcionalnost pripadajuće stranice.
+Razor Pages koristi datoteke \texttt{.cshtml} i \texttt{.cshtml.cs} za obradu podataka dobivenih iz servisa, njihovu dodatnu obradu, prosljeđivanje te prikaz podataka na korisničkom sučelju. Podatcima se u predlošku pristupa pomoću Razor anotacija. Datoteka \texttt{.cshtml} sadrži HTML strukturu i sintaksu Razor za generiranje dinamičkog sadržaja, dok datoteka \texttt{.cshtml.cs} sadrži metode, svojstva i druge komponente C\#-a koje podržavaju funkcionalnost pripadajuće stranice.
 \subsubsection{\texttt{.cshtml} datoteke}
 \label{subsubsec:.cshtml}
-Datoteke s ekstenzijom \texttt{.cshtml} nazivaju se i Razor predlošcima korištenima za izradu dinamičkih web stranica kombinacijom programskog jezika C\# i HTMLa (\textit{HTML - HyperText Markup Language}). Mogu sadržavati i razne kontrolne strukture, petlje i uvjete. U ispisu~\ref{createCheckupHtml} prikazana je datoteka \texttt{CreateCheckup.cshtml} koja je korištena pri kreaciji novog pregleda. Za unos se koristi atribut \texttt{asp-for} koji povezuje elemente HTMLa s odgovarajućim svojstvima modela, u ovom slučaju modela \texttt{CheckupModelForCreate}.
+Datoteke s ekstenzijom \texttt{.cshtml} nazivaju se i Razor predlošcima korištenima za izradu dinamičkih web stranica kombinacijom programskog jezika C\#-a i HTML-a (\textit{HTML - HyperText Markup Language}). Mogu sadržavati i razne kontrolne strukture, petlje i uvjete. U ispisu~\ref{createCheckupHtml} prikazana je datoteka \texttt{CreateCheckup.cshtml} koja je korištena pri kreiranju novog pregleda. Za unos se koristi atribut \texttt{asp-for} koji povezuje elemente HTML-a s odgovarajućim svojstvima modela, u ovom slučaju modela \texttt{CheckupModelForCreate}.
 
 \begin{lstlisting}[caption={Datoteka \texttt{CreateCheckup.cshtml}}, label=createCheckupHtml]
 @page
@@ -437,7 +437,7 @@ U formama koje koriste padajući izbornik, korišten je padajući izbornik \text
 \end{lstlisting}
 \subsubsection{\texttt{.cshtml.cs} datoteke}
 \label{subsubsec:.cshtml.cs}
-Svaka datoteka \texttt{.cshtml} ima svoju datoteku \texttt{.cshtml.cs} poznatiju i kao \textit{Code-Behind} koja sadrži k\^od C\#a koji podržava logiku i funkcionalnosti povezane s odgovarajućim Razor predloškom. Prilikom poziva stranice, datoteka \texttt{.cshtml.cs} prikazuje stranicu ili izvršava metodu \texttt{OnGet}. S obzirom na to da je navedena stranica korištena isključivo za unos podataka, dovoljno je navesti model ili atribute entiteta ispod atributa \texttt{[BindProperty]} s kojim će se unos sa stranice povezati. Korištenje atributa \\\texttt{[BindProperty]} olakšava manipulaciju podatcima između korisničkog sučelja i serverske logike.
+Svaka datoteka \texttt{.cshtml} ima svoju datoteku \texttt{.cshtml.cs} poznatiju i kao \textit{Code-Behind} koja sadrži k\^od C\#-a koji podržava logiku i funkcionalnosti povezane s odgovarajućim Razor predloškom. Prilikom poziva stranice, datoteka \texttt{.cshtml.cs} prikazuje stranicu ili izvršava metodu \texttt{OnGet}. S obzirom na to da je navedena stranica korištena isključivo za unos podataka, dovoljno je navesti model ili atribute entiteta ispod atributa \texttt{[BindProperty]} s kojim će se unos sa stranice povezati. Korištenje atributa \\\texttt{[BindProperty]} olakšava manipulaciju podatcima između korisničkog sučelja i serverske logike.
 
 \begin{lstlisting}[caption={Datoteka \texttt{CreateCheckup.cshtml.cs}}, label=createCheckupCs]
 using Microsoft.AspNetCore.Authorization;
